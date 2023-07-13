@@ -1,11 +1,13 @@
-const userModel = require("./model/model");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));//
+const userModel = require("./model/model");
 const mongoose = require("mongoose");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//Connecting to mongoDB database
 mongoose
     .connect(
         "mongodb+srv://godsownstay:project2022@development.ggvhjk7.mongodb.net/?retryWrites=true&w=majority",
@@ -21,6 +23,7 @@ mongoose
         console.log("Database not connected", error);
     });
 
+//Routes
 app.get("/", function (req, res) {
     res.send("Jai Shree Ram");
 });
