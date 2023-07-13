@@ -4,7 +4,7 @@ const app = express();
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));//
 const mongoose = require("mongoose");
 mongoose
     .connect(
