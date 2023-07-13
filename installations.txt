@@ -1,0 +1,7 @@
+npm install bcrypt cors express mongoose nodemon
+
+After installing nodemon wi need to write in the package.json  
+"scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
