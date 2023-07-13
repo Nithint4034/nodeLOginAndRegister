@@ -3,6 +3,8 @@ const app = express();
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const userModel = require("./model/model");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require("mongoose");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
