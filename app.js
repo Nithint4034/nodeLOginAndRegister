@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const bcrypt = require("bcrypt");
-const bodyParser = require("body-parser");
-const userModel = require("./model/model");
 const mongoose = require("mongoose");
+const userModel = require("./model/model");
+const bodyParser = require("body-parser");
+const bcrypt = require("bcrypt");
 
 //Connecting to mongoDB database
 mongoose
